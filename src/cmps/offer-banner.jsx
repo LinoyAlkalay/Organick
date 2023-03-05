@@ -1,6 +1,3 @@
-import natural from '../assets/imgs/natural.jpg'
-import offer from '../assets/imgs/offer.jpg'
-
 export function OfferBanner() {
     const offersContent = [
         {
