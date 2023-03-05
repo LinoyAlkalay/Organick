@@ -1,0 +1,22 @@
+.app-header {
+    background-color: $clr2;
+    margin-bottom: $layoutPadding;
+
+    main {
+        @include flex;
+        padding: em(70px, 18px) 0;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    nav>* {
+        // padding: 1em 0;
+        margin-inline-start: 1em;
+    }
+}
+
+.logo {
+    padding: .5em 0;
+}

@@ -1,0 +1,20 @@
+.home-page-hero {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    margin-bottom: rem(154px);
+
+    img {
+        grid-row: 1 / -1;
+    }
+
+    .hero {
+        position: absolute;
+        max-width: 530px;
+        grid-row: 2;
+
+        h1 {
+            margin-bottom: em(23px, 70px);
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.offer-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: rem(190px);
+    gap: em(36px);
+
+    &:first-child {
+        border: 1px solid red;
+    }
+}
+
+.offer-preview {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    img {
+        border-radius: 16px;
+        grid-row: 1 / -1;
+    }
+
+    div {
+        position: absolute;
+        top: 0;
+        max-width: 270px;
+        grid-row: 2;
+        margin-left: em(55px);
+
+        span {
+            text-transform: capitalize;
+        }
+    }
+
+    .natural {
+
+        &>* {
+            color: $clr2;
+        }
+    }
+}

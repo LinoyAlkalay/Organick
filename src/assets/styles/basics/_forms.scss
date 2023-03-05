@@ -1,0 +1,58 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: roboto-bold;
+}
+
+h1 {
+    font-size: rem(70px);
+    line-height: lh(82px, 70px);
+}
+
+h2 {
+    font-size: rem(50px);
+    line-height: lh(59px, 50px);
+}
+
+h3 {
+    font-size: rem(40px);
+    line-height: lh(47px, 40px);
+}
+
+h4 {
+    font-size: rem(35px);
+    line-height: lh(41px, 35px);
+}
+
+h5 {
+    font-size: rem(30px);
+    line-height: lh(35px, 30px);
+}
+
+h6 {
+    font-size: rem(25px);
+    line-height: lh(29px, 25px);
+}
+
+.yellowtail {
+    font-family: yellowtail;
+    font-size: rem(36px);
+    line-height: lh(49px, 36px);
+    color: $clr3;
+    margin-bottom: em(8px, 36px);
+}
+
+.btn-light {
+    @include btn(light)
+}
+
+.btn-dark {
+    @include btn(dark)
+}
+
+.btn-regular {
+    @include btn(regular)
+}
