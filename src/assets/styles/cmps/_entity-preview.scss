@@ -1,3 +1,25 @@
 .entity-preview {
-    background-color: $clr4;
+    // background-color: $clr6;
+    border: 2px solid $clr6;
+    border-radius: em(16px);
+
+    img {
+        aspect-ratio: 1 / 1;
+    }
+}
+
+.tags {
+    $fns: 15px;
+    font-size: rem($fns);
+    margin: em(30px, $fns) 0 em(13px, $fns) em(30px, $fns);
+    background-color: $clr1;
+    color: $clr2;
+    padding: em(6px, $fns) em(12px, $fns);
+    border-radius: em(8px, $fns);
+}
+
+.home-page-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

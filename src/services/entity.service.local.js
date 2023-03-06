@@ -43,8 +43,8 @@ async function save(entity) {
     return savedEntity
 }
 
-function getEmptyEntity(title = '') {
-    return { title }
+function getEmptyEntity(title = '', price = 0, img = 'broccoli', rate = 4.9, tags = []) {
+    return { title, price, img, rate, tags }
 }
 
 function getDefaultFilter() {
@@ -55,14 +55,20 @@ function _createEntitys() {
     let entitys = utilService.loadFromStorage(STORAGE_KEY)
     if (!entitys || !entitys.length) {
         entitys = []
-        entitys.unshift(_createEntity('entity1'))
-        entitys.unshift(_createEntity('entity2'))
+        entitys.unshift(_createEntity('Zelco Suji Elaichi Rusk', 15.00, 'rusk', 4.3, ['fresh']))
+        entitys.unshift(_createEntity('Eggs', 17.00, 'eggs', 4.6, ['fresh']))
+        entitys.unshift(_createEntity('Brown Hazelnut', 12.00, 'hazelnut', 4.8, ['nuts']))
+        entitys.unshift(_createEntity('Mung Bean', 11.00, 'bean', 4.1, ['health']))
+        entitys.unshift(_createEntity('Vegan Red Tomato', 17.00, 'tomato', 4.7, ['vegetable']))
+        entitys.unshift(_createEntity('White Nuts', 15.00, 'nuts', 4.5, ['millets']))
+        entitys.unshift(_createEntity('Fresh Banana Fruites', 14.00, 'banana', 4.8, ['fresh']))
+        entitys.unshift(_createEntity('Calabrese Broccoli', 13.00, 'broccoli', 4.9, ['vegetable']))
         utilService.saveToStorage(STORAGE_KEY, entitys)
     }
 }
 
-function _createEntity(title) {
-    const entity = getEmptyEntity(title)
+function _createEntity(title, price, img, rate, tags) {
+    const entity = getEmptyEntity(title, price, img, rate, tags)
     entity._id = utilService.makeId()
     return entity
 }

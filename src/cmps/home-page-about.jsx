@@ -5,11 +5,13 @@ import quality from '../assets/imgs/quality.svg'
 export function HomePageAbout() {
     const aboutUsList = [
         {
+            id: 101,
             head: 'Organic Foods Only',
             txt: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
             img: organic
         },
         {
+            id: 102,
             head: 'Quality Standards',
             txt: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
             img: quality
@@ -24,7 +26,7 @@ export function HomePageAbout() {
             <p>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
             <ul className="about-list">
                 {aboutUsList.map(about =>
-                    <li>
+                    <li key={about.id}>
                         <img src={about.img} alt="" />
                         <div>
                             <h6>{about.head}</h6>
